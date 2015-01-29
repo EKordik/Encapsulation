@@ -24,7 +24,8 @@ public class Startup {
         employee.setLastName("Piper");
         employee.setSSN("333-1234");
         
-        employee.Orientation("C102");
+        
+        employee.orientation();
 
         System.out.println("The employee's status is: " + employee.getStatus());
     }
