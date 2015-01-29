@@ -20,13 +20,11 @@ public class Startup {
             not have to be a GUI class.
         */
         Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
+        employee.setFirstName("Peter");
+        employee.setLastName("Piper");
+        employee.setSSN("333-1234");
         
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
+        employee.Orientation("C102");
 
         System.out.println("The employee's status is: " + employee.getStatus());
     }
