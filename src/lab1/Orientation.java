@@ -28,7 +28,7 @@ public class Orientation {
         this.cubeId = cubeId;
     }
     //Class For the Orientations steps
-    public void orientation(){
+    public void orientate(){
        meetWithHrForBenefitAndSalryInfo();
        meetDepartmentStaff();
        reviewDeptPolicies();
@@ -37,7 +37,7 @@ public class Orientation {
     
     // Assume this must be performed first
     private void meetWithHrForBenefitAndSalryInfo() {
-        String fmtDate = DateStamp();
+        String fmtDate = getDateStamp();
         System.out.println("Met with Hr on " + fmtDate);
         metWithHr = true;
     }
@@ -45,7 +45,7 @@ public class Orientation {
     // Assume this is must be performed second
     private void meetDepartmentStaff() {
         if(metWithHr) {
-            String fmtDate = DateStamp();
+            String fmtDate = getDateStamp();
             System.out.println("Met with Dept. Staff on " + fmtDate);
             metDeptStaff = true;
         } else {
@@ -57,7 +57,7 @@ public class Orientation {
     // Assume this must be performed third
     private void reviewDeptPolicies() {
         if(metWithHr && metDeptStaff) {
-            String fmtDate = DateStamp();
+            String fmtDate = getDateStamp();
             System.out.println("Reviewed Dept. Policies on " + fmtDate);
             reviewedDeptPolicies = true;
         } else {
@@ -70,7 +70,7 @@ public class Orientation {
     // Assume this must be performed 4th
     private void moveIntoCubicle(String cubeId) {
         if(metWithHr && metDeptStaff && reviewedDeptPolicies) {
-            String fmtDate = DateStamp();
+            String fmtDate = getDateStamp();
             System.out.println("Moved into cube on " + fmtDate);
             this.cubeId = cubeId;
             this.movedIn = true;
@@ -83,14 +83,13 @@ public class Orientation {
 
     }
     
-    private String DateStamp(){
+    private String getDateStamp(){
          SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         return sdf.format(currentDate);
     }
 
     public String getStatus() {
-        String fmtDate = DateStamp();
-
+        String fmtDate = getDateStamp();
         if(metWithHr && metDeptStaff
            && reviewedDeptPolicies && movedIn) {
             return "Orientation is completed on: " + fmtDate;

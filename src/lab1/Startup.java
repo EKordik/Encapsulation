@@ -25,7 +25,7 @@ public class Startup {
         employee.setSSN("333-1234");
         
         
-        employee.orientation();
+        employee.orientate();
 
         System.out.println("The employee's status is: " + employee.getStatus());
     }

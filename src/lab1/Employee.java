@@ -1,6 +1,5 @@
 package lab1;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -38,8 +37,8 @@ public class Employee {
         orientation1.setCubeID(cubeId);;
     }
     
-    public void orientation(){
-        orientation1.orientation();
+    public void orientate(){
+        orientation1.orientate();
     }
     
     public String getStatus() {
