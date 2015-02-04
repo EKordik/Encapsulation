@@ -11,7 +11,11 @@ package lab1;
  * @author ekordik
  */
 public class HrRep {
-    Employee employee = new Employee();
+    private Employee employee;
+    
+    public HrRep(){
+        employee = new Employee();
+    }
     
     public void hireEmployee(String firstName, String lastName, String ssn){
         employee.setFirstName(firstName);
